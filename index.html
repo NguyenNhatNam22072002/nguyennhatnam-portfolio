@@ -3,36 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Title: Senior removed as requested -->
-  <title>Nguyen Nhat Nam | Mobile Engineer (Flutter, iOS & Android)</title>
-  <meta name="description" content="Portfolio of Nguyen Nhat Nam - Mobile Engineer crafting high-performance, beautiful mobile apps with Flutter, Android Native (Kotlin), and iOS (Swift) with on-device AI.">
-  <meta property="og:title" content="Nguyen Nhat Nam | Mobile Engineer">
-  <meta property="og:description" content="Explore production mobile applications, interactive phone previews, clean architecture, and case studies.">
+  <title>Nguyen Nhat Nam | Mobile Engineer (Flutter & Native iOS/Android)</title>
+  <meta name="description" content="Nguyen Nhat Nam - Mobile Engineer specializing in Flutter, Android Native (Kotlin), and iOS (Swift) with interactive in-browser mobile simulators, on-device AI, and production architectures.">
+  <meta property="og:title" content="Nguyen Nhat Nam | Mobile Engineer Portfolio">
+  <meta property="og:description" content="Explore interactive mobile prototypes, offline speech AI, white-label ecosystems, and live App Store applications.">
   <meta property="og:type" content="website">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #070913;
-      --bg-card: rgba(15, 23, 42, 0.65);
-      --bg-card-hover: rgba(24, 34, 58, 0.85);
+      --bg: #060813;
+      --bg-card: rgba(15, 23, 42, 0.7);
+      --bg-card-hover: rgba(22, 33, 56, 0.88);
       --border: rgba(255, 255, 255, 0.08);
-      --border-accent: rgba(56, 189, 248, 0.4);
+      --border-accent: rgba(56, 189, 248, 0.35);
       --primary: #38bdf8;
-      --primary-rgb: 56, 189, 248;
       --secondary: #818cf8;
       --accent: #c084fc;
       --amber: #fbbf24;
       --emerald: #10b981;
+      --rose: #f43f5e;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --text-dim: #64748b;
       --glow-cyan: rgba(56, 189, 248, 0.25);
-      --glow-purple: rgba(168, 85, 247, 0.2);
     }
 
     * {
@@ -49,14 +47,13 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       background-image: 
-        radial-gradient(at 10% 10%, rgba(56, 189, 248, 0.12) 0px, transparent 40%),
-        radial-gradient(at 90% 15%, rgba(129, 140, 248, 0.12) 0px, transparent 40%),
-        radial-gradient(at 50% 60%, rgba(192, 132, 252, 0.08) 0px, transparent 50%),
-        radial-gradient(at 20% 90%, rgba(16, 185, 129, 0.06) 0px, transparent 50%);
+        radial-gradient(at 5% 5%, rgba(56, 189, 248, 0.14) 0px, transparent 40%),
+        radial-gradient(at 95% 15%, rgba(129, 140, 248, 0.14) 0px, transparent 40%),
+        radial-gradient(at 50% 55%, rgba(192, 132, 252, 0.08) 0px, transparent 50%),
+        radial-gradient(at 15% 90%, rgba(16, 185, 129, 0.06) 0px, transparent 50%);
       background-attachment: fixed;
     }
 
-    /* Ambient animated mesh & canvas particles */
     .bg-grid {
       position: fixed;
       inset: 0;
@@ -68,29 +65,16 @@
       z-index: 0;
     }
 
-    .font-mono {
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .font-display {
-      font-family: 'Space Grotesk', sans-serif;
-    }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .font-display { font-family: 'Space Grotesk', sans-serif; }
 
     /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #070913;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #1e293b;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #38bdf8;
-    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #060813; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
 
-    /* Modern Glass Card */
+    /* Glass Cards */
     .glass-card {
       background: var(--bg-card);
       backdrop-filter: blur(20px);
@@ -105,7 +89,7 @@
       box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.6), 0 0 30px -5px var(--glow-cyan);
     }
 
-    /* Gradient Text Utilities */
+    /* Gradients */
     .text-gradient {
       background: linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #818cf8 100%);
       -webkit-background-clip: text;
@@ -121,13 +105,8 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .text-gradient-emerald {
-      background: linear-gradient(135deg, #6ee7b7 0%, #34d399 60%, #10b981 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
 
-    /* Tech Pill */
+    /* Tech Pills */
     .tech-pill {
       display: inline-flex;
       align-items: center;
@@ -139,8 +118,7 @@
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.08);
       color: #cbd5e1;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      letter-spacing: 0.01em;
+      transition: all 0.2s ease;
       cursor: pointer;
     }
     .tech-pill:hover {
@@ -148,12 +126,12 @@
       color: #ffffff;
       background: rgba(56, 189, 248, 0.15);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
     }
     .tech-pill.active {
       background: rgba(56, 189, 248, 0.2);
       border-color: var(--primary);
       color: var(--primary);
+      font-weight: 600;
     }
 
     /* Buttons */
@@ -161,7 +139,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 13px 28px;
+      padding: 13px 26px;
       border-radius: 14px;
       font-weight: 600;
       font-size: 0.95rem;
@@ -169,7 +147,7 @@
       background: linear-gradient(135deg, #38bdf8, #60a5fa);
       box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
       text-decoration: none;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.25s ease;
       cursor: pointer;
       border: none;
     }
@@ -183,7 +161,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 13px 26px;
+      padding: 13px 24px;
       border-radius: 14px;
       font-weight: 600;
       font-size: 0.95rem;
@@ -202,16 +180,10 @@
       transform: translateY(-2px);
     }
 
-    .btn-pill {
-      border-radius: 9999px;
-      padding: 8px 18px;
-      font-size: 0.85rem;
-    }
-
-    /* REALISTIC IPHONE DEVICE FRAME */
+    /* iPhone Device Hardware Frame */
     .iphone-device {
       position: relative;
-      background: #0f172a;
+      background: #000;
       border: 10px solid #1e293b;
       border-radius: 46px;
       overflow: hidden;
@@ -219,11 +191,10 @@
         0 25px 60px -15px rgba(0, 0, 0, 0.8),
         0 0 0 1px rgba(255, 255, 255, 0.1),
         inset 0 0 12px rgba(0, 0, 0, 0.6);
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       aspect-ratio: 9 / 19.5;
     }
     .iphone-device::before {
-      /* Dynamic Island / Notch */
       content: '';
       position: absolute;
       top: 10px;
@@ -233,11 +204,10 @@
       height: 18px;
       background: #000;
       border-radius: 20px;
-      z-index: 20;
+      z-index: 30;
       box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
     }
     .iphone-device::after {
-      /* Home Indicator Bar */
       content: '';
       position: absolute;
       bottom: 8px;
@@ -247,7 +217,7 @@
       height: 4px;
       background: rgba(255, 255, 255, 0.4);
       border-radius: 4px;
-      z-index: 20;
+      z-index: 30;
     }
     .iphone-device:hover {
       transform: translateY(-8px) scale(1.02);
@@ -263,18 +233,15 @@
       display: block;
       transition: transform 0.4s ease;
     }
-    .iphone-device:hover img {
-      transform: scale(1.03);
-    }
 
-    /* Floating Navigation */
+    /* Navigation */
     nav {
       position: fixed;
       top: 24px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 100;
-      background: rgba(10, 15, 29, 0.82);
+      background: rgba(10, 15, 29, 0.85);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
       border: 1px solid rgba(255, 255, 255, 0.1);
@@ -299,7 +266,6 @@
       color: var(--primary);
     }
 
-    /* Section container */
     .container {
       max-width: 1240px;
       margin: 0 auto;
@@ -322,13 +288,13 @@
       text-transform: uppercase;
       color: var(--primary);
       margin-bottom: 12px;
-      padding: 4px 12px;
+      padding: 4px 14px;
       background: rgba(56, 189, 248, 0.1);
       border: 1px solid rgba(56, 189, 248, 0.2);
       border-radius: 9999px;
     }
     .section-title {
-      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
       font-weight: 800;
       letter-spacing: -0.02em;
     }
@@ -365,36 +331,10 @@
       100% { transform: scale(1); opacity: 0.4; }
     }
 
-    /* Timeline */
-    .timeline {
-      position: relative;
-      padding-left: 36px;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 11px;
-      top: 12px;
-      bottom: 12px;
-      width: 2px;
-      background: linear-gradient(to bottom, #38bdf8, #818cf8, #fbbf24, transparent);
-    }
-    .timeline-dot {
-      position: absolute;
-      left: 4px;
-      top: 10px;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: #070913;
-      border: 3px solid #38bdf8;
-      box-shadow: 0 0 12px var(--primary);
-    }
-
-    /* Interactive Showcase Cards */
+    /* Project Cards */
     .project-card {
       position: relative;
-      background: rgba(15, 23, 42, 0.7);
+      background: rgba(15, 23, 42, 0.75);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 32px;
@@ -408,7 +348,6 @@
       box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.7), 0 0 40px -10px rgba(56, 189, 248, 0.15);
     }
 
-    /* Feature highlights bullet */
     .feature-item {
       display: flex;
       align-items: flex-start;
@@ -426,13 +365,14 @@
       justify-content: center;
       flex-shrink: 0;
       margin-top: 2px;
+      font-weight: 700;
     }
 
-    /* Fullscreen Modal Drawer / Case Study Detail */
+    /* Modal Case Study Drawer */
     .drawer-modal {
       position: fixed;
       inset: 0;
-      background: rgba(4, 7, 18, 0.88);
+      background: rgba(4, 7, 18, 0.9);
       backdrop-filter: blur(16px);
       z-index: 1000;
       display: none;
@@ -447,21 +387,16 @@
       opacity: 1;
     }
     .drawer-body {
-      background: #0f172a;
+      background: #0b1120;
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 28px;
-      max-width: 960px;
+      max-width: 1000px;
       width: 100%;
-      max-height: 90vh;
+      max-height: 92vh;
       overflow-y: auto;
       padding: 44px;
       position: relative;
-      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8), 0 0 40px rgba(56, 189, 248, 0.2);
-      transform: translateY(20px);
-      transition: transform 0.3s ease;
-    }
-    .drawer-modal.active .drawer-body {
-      transform: translateY(0);
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.9), 0 0 50px rgba(56, 189, 248, 0.2);
     }
     .drawer-close {
       position: absolute;
@@ -479,17 +414,57 @@
       cursor: pointer;
       font-size: 1.5rem;
       transition: all 0.2s;
+      z-index: 10;
     }
     .drawer-close:hover {
       background: #ef4444;
       transform: scale(1.05);
     }
 
-    /* Screenshot Zoom Modal */
+    /* Interactive Live Simulator Screen Inside Device */
+    .sim-screen {
+      width: 100%;
+      height: 100%;
+      background: #0f172a;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      padding: 44px 16px 20px 16px;
+      user-select: none;
+    }
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+    .sim-waveform-bar {
+      width: 4px;
+      background: #38bdf8;
+      border-radius: 4px;
+      transition: height 0.15s ease;
+    }
+    .sim-chat-bubble {
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Lightbox */
     .zoom-modal {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.92);
+      background: rgba(0, 0, 0, 0.94);
       backdrop-filter: blur(12px);
       z-index: 1100;
       display: none;
@@ -497,9 +472,7 @@
       justify-content: center;
       padding: 20px;
     }
-    .zoom-modal.active {
-      display: flex;
-    }
+    .zoom-modal.active { display: flex; }
     .zoom-modal img {
       max-height: 88vh;
       max-width: 90vw;
@@ -508,43 +481,24 @@
       border: 2px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Interactive Live Device Simulator in Hero */
-    .hero-device-wrap {
-      perspective: 1200px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .hero-device {
-      transform: rotateY(-10deg) rotateX(6deg);
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .hero-device-wrap:hover .hero-device {
-      transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+    /* Interactive Signature Pad Canvas */
+    #sigCanvas {
+      background: #1e293b;
+      border: 2px dashed rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      cursor: crosshair;
+      touch-action: none;
+      width: 100%;
+      height: 130px;
     }
 
     /* Responsiveness */
     @media (max-width: 992px) {
-      .hero-grid {
-        grid-template-columns: 1fr !important;
-        text-align: center;
-      }
-      .hero-cta {
-        justify-content: center;
-      }
-      .project-grid {
-        grid-template-columns: 1fr !important;
-      }
-      .project-mockups {
-        order: -1;
-        margin-bottom: 30px;
-      }
-      .hero-device-wrap {
-        margin-top: 30px;
-      }
-      .hero-device {
-        transform: none !important;
-      }
+      .hero-grid { grid-template-columns: 1fr !important; text-align: center; }
+      .hero-cta { justify-content: center; }
+      .project-grid { grid-template-columns: 1fr !important; }
+      .project-mockups { order: -1; margin-bottom: 30px; }
+      .hero-device-wrap { margin-top: 30px; }
     }
     @media (max-width: 768px) {
       nav {
@@ -555,12 +509,7 @@
         width: calc(100% - 32px);
         justify-content: space-around;
       }
-      .project-card {
-        padding: 28px 20px;
-      }
-      .drawer-body {
-        padding: 28px 20px;
-      }
+      .project-card, .drawer-body { padding: 26px 18px; }
     }
   </style>
 </head>
@@ -585,40 +534,41 @@
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
       Experience
     </a>
-    <a href="#contact" class="btn-primary btn-pill" style="color: #070913; font-weight: 700;">Hire Me</a>
+    <a href="#contact" class="btn-primary" style="padding: 7px 18px; border-radius: 9999px; font-size: 0.85rem;">Hire Me</a>
   </nav>
 
-  <!-- HERO SECTION WITH INTERACTIVE 3D MOBILE DEVICE -->
+  <!-- HERO SECTION WITH LIVE INTERACTIVE DEVICE DEMO -->
   <section id="home" style="min-height: 100vh; display: flex; align-items: center; padding-top: 100px; padding-bottom: 70px;">
     <div class="container">
       <div class="hero-grid" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 50px; align-items: center;">
         
-        <!-- Hero Text -->
+        <!-- Left: Hero Text -->
         <div>
-          <!-- Available Badge -->
+          <!-- Status Tag -->
           <div style="display: inline-flex; align-items: center; gap: 10px; padding: 6px 16px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 9999px; margin-bottom: 24px;">
             <span class="status-dot"></span>
-            <span style="font-size: 0.8rem; font-weight: 700; color: #34d399; letter-spacing: 0.06em; text-transform: uppercase;">Available for Mobile & AI Projects</span>
+            <span style="font-size: 0.8rem; font-weight: 700; color: #34d399; letter-spacing: 0.06em; text-transform: uppercase;">Available for High-Impact Mobile Apps</span>
           </div>
 
+          <!-- Main Heading -->
           <h1 style="font-size: clamp(2.6rem, 5.5vw, 4.2rem); font-weight: 800; line-height: 1.12; margin-bottom: 20px;" class="font-display">
-            Crafting Fluid <br>
-            <span class="text-gradient">Mobile Experiences</span>
+            Nguyen Nhat Nam <br>
+            <span class="text-gradient">Mobile Developer</span>
           </h1>
 
-          <p style="font-size: 1.3rem; font-weight: 600; color: #94a3b8; margin-bottom: 22px;">
-            Hi, I'm <strong style="color: #ffffff;">Nguyen Nhat Nam</strong> — Mobile Engineer specializing in <span style="color: #38bdf8;">Flutter (Dart)</span>, <span style="color: #a78bfa;">Android Native (Kotlin)</span>, and <span style="color: #f472b6;">iOS (Swift)</span>.
+          <p style="font-size: 1.25rem; font-weight: 600; color: #94a3b8; margin-bottom: 22px;">
+            Building high-performance mobile apps with <span style="color: #38bdf8;">Flutter (Dart)</span>, <span style="color: #a78bfa;">Native Android (Kotlin)</span>, and <span style="color: #f472b6;">iOS (Swift)</span>.
           </p>
 
           <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.8; margin-bottom: 36px; max-width: 620px;">
-            I build high-performance, crash-resilient mobile applications that scale. Experienced in <strong>Clean Layered Architecture</strong>, <strong>On-Device Local AI & STT</strong>, <strong>Multi-Tenant White-Labeling</strong>, and driving the complete App Store & Google Play release lifecycle.
+            Engineering commercial apps that combine <strong>Clean Layered Architecture</strong>, <strong>On-Device Local AI (LLM / STT)</strong>, and <strong>Multi-Tenant White-Labeling</strong> for thousands of users across Google Play & App Store.
           </p>
 
           <!-- Action Buttons -->
           <div class="hero-cta" style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 44px;">
             <a href="#projects" class="btn-primary">
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-              Explore Featured Apps
+              View Featured Apps & Demos
             </a>
             <a href="https://github.com/NguyenNhatNam22072002" target="_blank" rel="noopener" class="btn-secondary">
               <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -626,15 +576,15 @@
             </a>
             <a href="mailto:nhatnam22072002@gmail.com" class="btn-secondary">
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              Get in Touch
+              Contact Me
             </a>
           </div>
 
-          <!-- Impact Metrics Bar -->
+          <!-- Impact Metrics -->
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-top: 24px; border-top: 1px solid var(--border);">
             <div>
               <div class="font-display text-gradient" style="font-size: 2.2rem; font-weight: 800;">20+</div>
-              <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">White-Label Brands in Production</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">White-Label Brands Deployed</div>
             </div>
             <div>
               <div class="font-display text-gradient-purple" style="font-size: 2.2rem; font-weight: 800;">100%</div>
@@ -647,31 +597,120 @@
           </div>
         </div>
 
-        <!-- 3D Mobile Device Interactive Mockup Showcase -->
-        <div class="hero-device-wrap">
+        <!-- Right: Interactive Device with Live App Simulator -->
+        <div class="hero-device-wrap" style="display: flex; justify-content: center;">
           <div style="position: relative;">
             <!-- Glow background -->
-            <div style="position: absolute; inset: -30px; background: radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, rgba(192, 132, 252, 0.2) 50%, transparent 75%); filter: blur(40px); z-index: -1;"></div>
+            <div style="position: absolute; inset: -20px; background: radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, rgba(192, 132, 252, 0.15) 50%, transparent 75%); filter: blur(40px); z-index: -1;"></div>
 
-            <!-- Phone Frame -->
-            <div class="iphone-device hero-device" style="width: 290px; height: 600px; cursor: pointer;" onclick="openCaseStudy('clearhear')">
-              <img id="heroPhoneImg" src="assets/images/clearhear_main.png" alt="ClearHear Main App Interface">
+            <!-- Device Frame -->
+            <div class="iphone-device" style="width: 290px; height: 590px;">
               
-              <!-- Floating App Overlay Tag -->
-              <div style="position: absolute; bottom: 24px; left: 16px; right: 16px; z-index: 25; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
-                <div>
-                  <div style="font-size: 0.72rem; color: #38bdf8; font-weight: 700; text-transform: uppercase;">Featured App</div>
-                  <div style="font-size: 0.95rem; font-weight: 700; color: #fff;">ClearHear Live AI</div>
+              <!-- SCREEN 1: CLEARHEAR LIVE AI SIMULATOR -->
+              <div id="sim-screen-clearhear" class="sim-screen">
+                <div class="sim-header">
+                  <span style="font-weight: 700; color: #fff;">ClearHear Live</span>
+                  <span style="display: flex; align-items: center; gap: 4px; color: #34d399; font-size: 0.72rem;">
+                    <span class="status-dot"></span> Offline AI Ready
+                  </span>
                 </div>
-                <span class="btn-primary" style="padding: 6px 12px; font-size: 0.75rem; border-radius: 8px;">Case Study &rarr;</span>
+
+                <!-- Live Waveform Animation -->
+                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px; margin-bottom: 12px;">
+                  <div style="font-size: 0.7rem; color: #94a3b8; margin-bottom: 8px;">sherpa-onnx Audio Decibels</div>
+                  <div id="sim-waveforms" style="display: flex; align-items: flex-end; justify-content: space-between; height: 38px; gap: 3px;">
+                    <!-- Waveform bars generated by JS -->
+                  </div>
+                </div>
+
+                <!-- Live Transcript Container -->
+                <div style="flex: 1; overflow-y: auto; padding-right: 4px;" id="sim-transcript-box">
+                  <div class="sim-chat-bubble" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3);">
+                    <div style="font-size: 0.68rem; color: #38bdf8; font-weight: 700; margin-bottom: 2px;">Speaker 1 • 00:02</div>
+                    <div>Good morning team. Today we test local on-device inference for speech recognition.</div>
+                  </div>
+                  <div class="sim-chat-bubble" style="background: rgba(192, 132, 252, 0.15); border: 1px solid rgba(192, 132, 252, 0.3);">
+                    <div style="font-size: 0.68rem; color: #c084fc; font-weight: 700; margin-bottom: 2px;">Speaker 2 • 00:07</div>
+                    <div>Confirmed. sherpa-onnx is streaming chunks at 100ms with zero cloud delay.</div>
+                  </div>
+                </div>
+
+                <!-- Simulator Action Buttons -->
+                <div style="display: flex; gap: 8px; margin-top: 10px;">
+                  <button id="sim-btn-speak" onclick="simAddSpeech()" class="btn-primary" style="flex: 1; padding: 8px 10px; font-size: 0.75rem; justify-content: center; border-radius: 10px;">
+                    Simulate Voice STT
+                  </button>
+                  <button onclick="simSummarize()" class="btn-secondary" style="padding: 8px 10px; font-size: 0.75rem; border-radius: 10px; border-color: rgba(192, 132, 252, 0.4); color: #c084fc;">
+                    AI Summary
+                  </button>
+                </div>
               </div>
+
+              <!-- SCREEN 2: CANVAS LIVING WHITE-LABEL SIMULATOR -->
+              <div id="sim-screen-canvas" class="sim-screen" style="display: none;">
+                <div class="sim-header">
+                  <span style="font-weight: 700; color: #fff;" id="sim-canvas-brand-title">Serenity Pines</span>
+                  <span style="color: #818cf8; font-size: 0.72rem;">Multi-Flavor</span>
+                </div>
+
+                <!-- Brand selector pill -->
+                <div style="font-size: 0.72rem; color: #94a3b8; margin-bottom: 6px;">Switch Active Tenant Flavor:</div>
+                <div style="display: flex; gap: 6px; margin-bottom: 12px;">
+                  <button onclick="switchTenant('Serenity Pines', '#38bdf8')" class="tech-pill active" id="pill-brand-1" style="font-size: 0.7rem; padding: 4px 8px;">Serenity Pines</button>
+                  <button onclick="switchTenant('Catalina Living', '#f43f5e')" class="tech-pill" id="pill-brand-2" style="font-size: 0.7rem; padding: 4px 8px;">Catalina</button>
+                  <button onclick="switchTenant('Aura Holdings', '#10b981')" class="tech-pill" id="pill-brand-3" style="font-size: 0.7rem; padding: 4px 8px;">Aura</button>
+                </div>
+
+                <!-- Community Card Feed -->
+                <div style="flex: 1; overflow-y: auto;">
+                  <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; overflow: hidden; margin-bottom: 10px;">
+                    <img id="sim-canvas-img" src="assets/images/canvas_screen_feed.jpg" style="width: 100%; height: 160px; object-fit: cover;">
+                    <div style="padding: 10px;">
+                      <div style="font-size: 0.75rem; font-weight: 700; color: #fff;">Roof Garden Yoga Session</div>
+                      <div style="font-size: 0.68rem; color: #94a3b8; margin-top: 2px;">Tomorrow at 08:00 AM • Amenity Deck</div>
+                      <button class="btn-primary" style="margin-top: 8px; width: 100%; padding: 6px; font-size: 0.72rem; justify-content: center; border-radius: 8px;">
+                        RSVP Amenity Pass
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SCREEN 3: VESTA PROPTECH SIGNATURE SIMULATOR -->
+              <div id="sim-screen-vesta" class="sim-screen" style="display: none;">
+                <div class="sim-header">
+                  <span style="font-weight: 700; color: #fff;">Vesta E-Contract</span>
+                  <span style="color: #fbbf24; font-size: 0.72rem;">SSL Encrypted</span>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 10px; margin-bottom: 12px; font-size: 0.75rem;">
+                  <div style="font-weight: 700; color: #fff;">Residential Lease Agreement</div>
+                  <div style="color: #94a3b8; font-size: 0.7rem; margin-top: 2px;">Unit 402 • 12-Month Lease • Verified KYC</div>
+                </div>
+
+                <div style="font-size: 0.72rem; color: #cbd5e1; margin-bottom: 6px;">
+                  ✍️ Draw digital signature below:
+                </div>
+                <canvas id="sigCanvas"></canvas>
+
+                <div style="display: flex; gap: 8px; margin-top: 10px;">
+                  <button onclick="clearSignature()" class="btn-secondary" style="flex: 1; padding: 8px; font-size: 0.72rem; justify-content: center; border-radius: 8px;">
+                    Clear Pad
+                  </button>
+                  <button onclick="submitSignature()" class="btn-primary" style="flex: 1; padding: 8px; font-size: 0.72rem; justify-content: center; border-radius: 8px;">
+                    Sign & Encrypt
+                  </button>
+                </div>
+                <div id="sig-status" style="font-size: 0.68rem; color: #34d399; text-align: center; margin-top: 8px; min-height: 16px;"></div>
+              </div>
+
             </div>
 
-            <!-- Interactive switcher buttons below device -->
+            <!-- Device Tab Switcher -->
             <div style="display: flex; justify-content: center; gap: 8px; margin-top: 18px;">
-              <button onclick="switchHeroScreen('clearhear')" class="tech-pill active" id="btn-hero-clearhear">ClearHear (AI)</button>
-              <button onclick="switchHeroScreen('canvas')" class="tech-pill" id="btn-hero-canvas">Canvas Living</button>
-              <button onclick="switchHeroScreen('vesta')" class="tech-pill" id="btn-hero-vesta">Vesta PropTech</button>
+              <button onclick="switchSimApp('clearhear')" class="tech-pill active" id="btn-tab-clearhear">ClearHear Demo</button>
+              <button onclick="switchSimApp('canvas')" class="tech-pill" id="btn-tab-canvas">Canvas Demo</button>
+              <button onclick="switchSimApp('vesta')" class="tech-pill" id="btn-tab-vesta">Vesta Demo</button>
             </div>
           </div>
         </div>
@@ -686,22 +725,22 @@
       <div class="section-title-wrap">
         <span class="section-tag">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-          Real-World Applications
+          Production Portfolios
         </span>
-        <h2 class="section-title font-display">Featured Production Apps</h2>
-        <p class="section-desc">Click on any project to explore full architectural breakdowns, engineering challenges, screenshots, and live store publications.</p>
+        <h2 class="section-title font-display">Featured Mobile Projects</h2>
+        <p class="section-desc">Click on any project to explore deep-dive architectural blueprints, real screen walkthroughs, code design, and live App Store links.</p>
       </div>
 
       <!-- PROJECT 1: CLEARHEAR APP -->
       <div class="project-card">
         <div class="project-grid" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center;">
-          <!-- Left details -->
+          <!-- Left: Details -->
           <div>
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;">
               <span class="tech-pill" style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: #38bdf8; font-weight: 700;">
                 Edge AI & Offline Speech
               </span>
-              <span style="font-size: 0.85rem; color: #94a3b8;">Zero-backend Latency</span>
+              <span style="font-size: 0.85rem; color: #94a3b8;">100% On-Device • Zero Cloud API</span>
             </div>
 
             <h3 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 12px; color: #ffffff;" class="font-display">
@@ -712,32 +751,30 @@
             </p>
 
             <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.75; margin-bottom: 24px;">
-              A privacy-centric mobile application capable of transcribing continuous spoken audio in real-time, separating speakers (diarization), and running a local <strong>Large Language Model (Qwen2.5 GGUF)</strong> entirely on-device with zero internet connectivity and zero cloud costs.
+              Built for high-privacy environments (medical consultations, confidential executive meetings). By bundling <strong>sherpa-onnx</strong> and local <strong>Qwen2.5 GGUF</strong> weights directly on mobile, users enjoy real-time speech-to-text, live speaker diarization, and meeting minutes generation completely offline.
             </p>
 
-            <!-- Key highlight bullet points -->
             <div style="margin-bottom: 28px;">
               <div class="feature-item">
                 <div class="feature-icon">✓</div>
-                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>sherpa-onnx Engine:</strong> High-accuracy offline Automatic Speech Recognition (ASR) running on CPU/NPU with real-time audio streaming.</div>
+                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>sherpa-onnx Engine via Dart FFI:</strong> Continuous real-time acoustic inference running in an asynchronous background Isolate to keep UI rendering at 60 FPS.</div>
               </div>
               <div class="feature-item">
                 <div class="feature-icon">✓</div>
-                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>On-Device LLM (flutter_llama):</strong> Embedded Qwen2.5 0.5B/1.5B quantized GGUF weights generating structured meeting minutes and highlights offline.</div>
+                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Embedded LLM (flutter_llama):</strong> Quantized Qwen2.5 model executing directly on device NPU/RAM to produce instant executive summaries with zero token fees.</div>
               </div>
               <div class="feature-item">
                 <div class="feature-icon">✓</div>
-                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Live Waveform Visualizer:</strong> Custom canvas renderer with 60 FPS waveform sync and local SQLite persistent storage.</div>
+                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Reactive Audio Waveforms:</strong> Custom canvas visualizer tied directly to microphone amplitude decibels and cached into local SQLite.</div>
               </div>
             </div>
 
-            <!-- Tech stack pills -->
+            <!-- Tech Pills -->
             <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px;">
-              <span class="tech-pill">Flutter</span>
-              <span class="tech-pill">Dart</span>
-              <span class="tech-pill">GetX</span>
-              <span class="tech-pill">ONNX Runtime</span>
+              <span class="tech-pill">Flutter & Dart</span>
+              <span class="tech-pill">GetX Architecture</span>
               <span class="tech-pill">sherpa-onnx</span>
+              <span class="tech-pill">ONNX Runtime</span>
               <span class="tech-pill" style="border-color: rgba(192, 132, 252, 0.4); color: #c084fc;">Qwen2.5 GGUF</span>
               <span class="tech-pill">SQLite (sqflite)</span>
             </div>
@@ -745,20 +782,20 @@
             <div style="display: flex; gap: 14px; flex-wrap: wrap;">
               <button onclick="openCaseStudy('clearhear')" class="btn-primary">
                 <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                View Full Project Details
+                View Full Project Details & Code Design
               </button>
             </div>
           </div>
 
-          <!-- Right: Mobile Device Trio Preview -->
+          <!-- Right: Mockups -->
           <div class="project-mockups" style="display: flex; gap: 14px; justify-content: center; align-items: center;">
-            <div class="iphone-device" style="width: 140px; height: 300px; cursor: pointer;" onclick="openZoom('assets/images/clearhear_main.png')" title="Click to enlarge">
+            <div class="iphone-device" style="width: 140px; height: 300px; cursor: pointer;" onclick="openZoom('assets/images/clearhear_main.png')" title="Tap to zoom">
               <img src="assets/images/clearhear_main.png" alt="ClearHear Live Speech">
             </div>
-            <div class="iphone-device" style="width: 160px; height: 340px; cursor: pointer; z-index: 5; transform: translateY(-10px);" onclick="openZoom('assets/images/clearhear_session_detail.jpg')" title="Click to enlarge">
+            <div class="iphone-device" style="width: 160px; height: 340px; cursor: pointer; z-index: 5; transform: translateY(-10px);" onclick="openZoom('assets/images/clearhear_session_detail.jpg')" title="Tap to zoom">
               <img src="assets/images/clearhear_session_detail.jpg" alt="ClearHear AI Summary Session">
             </div>
-            <div class="iphone-device" style="width: 140px; height: 300px; cursor: pointer;" onclick="openZoom('assets/images/clearhear_settings.png')" title="Click to enlarge">
+            <div class="iphone-device" style="width: 140px; height: 300px; cursor: pointer;" onclick="openZoom('assets/images/clearhear_settings.png')" title="Tap to zoom">
               <img src="assets/images/clearhear_settings.png" alt="ClearHear Settings">
             </div>
           </div>
@@ -768,70 +805,69 @@
       <!-- PROJECT 2: CANVAS LIVING (GENERATOR) -->
       <div class="project-card">
         <div class="project-grid" style="display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 48px; align-items: center;">
-          <!-- Left: Mobile Device Trio Preview -->
+          <!-- Left: Mockups -->
           <div class="project-mockups" style="display: flex; gap: 14px; justify-content: center; align-items: center;">
-            <div class="iphone-device" style="width: 140px; height: 300px; cursor: pointer;" onclick="openZoom('assets/images/canvas_screen_facilities.jpg')" title="Click to enlarge">
+            <div class="iphone-device" style="width: 140px; height: 300px; cursor: pointer;" onclick="openZoom('assets/images/canvas_screen_facilities.jpg')" title="Tap to zoom">
               <img src="assets/images/canvas_screen_facilities.jpg" alt="Canvas Living Facilities">
             </div>
-            <div class="iphone-device" style="width: 160px; height: 340px; cursor: pointer; z-index: 5; transform: translateY(-10px);" onclick="openZoom('assets/images/canvas_screen_feed.jpg')" title="Click to enlarge">
+            <div class="iphone-device" style="width: 160px; height: 340px; cursor: pointer; z-index: 5; transform: translateY(-10px);" onclick="openZoom('assets/images/canvas_screen_feed.jpg')" title="Tap to zoom">
               <img src="assets/images/canvas_screen_feed.jpg" alt="Canvas Living Community Feed">
             </div>
-            <div class="iphone-device" style="width: 140px; height: 300px; cursor: pointer;" onclick="openZoom('assets/images/canvas_screen_services.jpg')" title="Click to enlarge">
+            <div class="iphone-device" style="width: 140px; height: 300px; cursor: pointer;" onclick="openZoom('assets/images/canvas_screen_services.jpg')" title="Tap to zoom">
               <img src="assets/images/canvas_screen_services.jpg" alt="Canvas Living Services">
             </div>
           </div>
 
-          <!-- Right details -->
+          <!-- Right: Details -->
           <div>
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;">
               <span class="tech-pill" style="background: rgba(129, 140, 248, 0.15); border-color: rgba(129, 140, 248, 0.4); color: #818cf8; font-weight: 700;">
-                Enterprise Multi-Tenant
+                Enterprise White-Label
               </span>
-              <span style="font-size: 0.85rem; color: #94a3b8;">Commercial Production Ecosystem</span>
+              <span style="font-size: 0.85rem; color: #94a3b8;">20+ Deployed Brands on App Store</span>
             </div>
 
             <h3 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 12px; color: #ffffff;" class="font-display">
               Canvas Living (Generator)
             </h3>
             <p style="font-size: 1.15rem; color: #818cf8; font-weight: 600; margin-bottom: 18px;">
-              White-Label Community Living Platform (20+ Brands Deployed)
+              White-Label Community Living Platform (Android Native Kotlin & iOS Swift)
             </p>
 
             <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.75; margin-bottom: 24px;">
-              A commercial white-label mobile app ecosystem engineered for high-end student housing and real estate communities. Deployed across <strong>20+ standalone brands</strong> (Brookland, Catalina, Aura Holdings, Ingenia, Serenity Pines) with dynamic theming and automated distribution pipelines.
+              An enterprise mobile platform powering student housing and real estate communities across <strong>20+ standalone brands</strong> (Brookland, Catalina, Aura Holdings, Ingenia, Serenity Pines). Built from a unified codebase using multi-flavor builds and Clean Architecture.
             </p>
 
-            <!-- Key highlights -->
             <div style="margin-bottom: 28px;">
               <div class="feature-item">
                 <div class="feature-icon" style="background: rgba(129, 140, 248, 0.15); color: #818cf8;">✓</div>
-                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Multi-Flavor Architecture:</strong> Orchestrated Gradle flavors and Xcode schemas to publish 20+ uniquely branded apps from a single clean codebase.</div>
+                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Multi-Flavor Build Automation:</strong> Scripted Gradle variants and Xcode schemas to generate unique App IDs, theme colors, and endpoints at build time.</div>
               </div>
               <div class="feature-item">
                 <div class="feature-icon" style="background: rgba(129, 140, 248, 0.15); color: #818cf8;">✓</div>
-                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Native Performance (Kotlin & Swift):</strong> High frame-rate community feeds, event booking, facility scheduling, and offline caching.</div>
+                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Strict MVVM & Clean Architecture:</strong> Completely decoupled presentation layer from business logic for bulletproof testing and maintainability.</div>
               </div>
               <div class="feature-item">
                 <div class="feature-icon" style="background: rgba(129, 140, 248, 0.15); color: #818cf8;">✓</div>
-                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Universal Deep Linking & FCM:</strong> Direct notification-to-screen routing for urgent community notices and facility pass scanning.</div>
+                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Deep Routing via Universal Links:</strong> Integrated FCM notifications to navigate tenants directly into specific booking or maintenance events.</div>
               </div>
             </div>
 
-            <!-- Tech stack pills -->
+            <!-- Tech Pills -->
             <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px;">
               <span class="tech-pill">Kotlin</span>
               <span class="tech-pill">Swift</span>
               <span class="tech-pill">Android SDK</span>
               <span class="tech-pill">Clean Architecture</span>
-              <span class="tech-pill">MVVM</span>
-              <span class="tech-pill">Gradle Flavors</span>
+              <span class="tech-pill">MVVM Pattern</span>
+              <span class="tech-pill">Gradle Variants</span>
               <span class="tech-pill">FCM</span>
             </div>
 
             <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
               <button onclick="openCaseStudy('canvas')" class="btn-primary">
                 <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                Project Breakdown
+                Project Breakdown & Architecture
               </button>
               <a href="https://apps.apple.com/vn/app/serenity-pines/id6478105349?l=vi" target="_blank" rel="noopener" class="btn-secondary">
                 <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.66-1.09 1.73-.96 2.76.99.08 2.05-.51 2.69-1.26z"/></svg>
@@ -845,49 +881,47 @@
       <!-- PROJECT 3: RENTLE MOBILE (VESTA APP) -->
       <div class="project-card">
         <div class="project-grid" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center;">
-          <!-- Left details -->
+          <!-- Left: Details -->
           <div>
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;">
               <span class="tech-pill" style="background: rgba(251, 191, 36, 0.15); border-color: rgba(251, 191, 36, 0.4); color: #fbbf24; font-weight: 700;">
                 PropTech & Digital KYC
               </span>
-              <span style="font-size: 0.85rem; color: #94a3b8;">Full Product Lifecycle</span>
+              <span style="font-size: 0.85rem; color: #94a3b8;">Commercial Production App</span>
             </div>
 
             <h3 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 12px; color: #ffffff;" class="font-display">
               Rentle Mobile (Vesta App)
             </h3>
             <p style="font-size: 1.15rem; color: #fbbf24; font-weight: 600; margin-bottom: 18px;">
-              Digital Tenant Lifecycle, In-App Signing & Property Management
+              Digital Tenant Lifecycle, In-App E-Signing & Property Management
             </p>
 
             <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.75; margin-bottom: 24px;">
-              A full-fledged commercial PropTech mobile solution designed to digitize every step of renting: property discovery, digital identity verification (KYC), on-device lease contract signing, maintenance requests, and building amenities access.
+              A comprehensive mobile platform modernizing residential leasing: property discovery, digital identity verification (KYC), legally-binding touchscreen lease contract signing, rent payments, and building amenity access.
             </p>
 
-            <!-- Key highlights -->
             <div style="margin-bottom: 28px;">
               <div class="feature-item">
                 <div class="feature-icon" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24;">✓</div>
-                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Digital E-Signature Module:</strong> Custom touchscreen signature pad with vector path smoothing, biometric authentication, and PDF contract embedding.</div>
+                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Digital E-Signature Module:</strong> Touchscreen drawing pad with Bezier curve interpolation to stamp biometric signatures directly into PDF leases.</div>
               </div>
               <div class="feature-item">
                 <div class="feature-icon" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24;">✓</div>
-                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Banking-Grade Security:</strong> Encrypted local token vault using iOS Keychain & Android EncryptedSharedPreferences, plus network SSL Pinning.</div>
+                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Banking-Grade Security:</strong> Token storage in iOS Keychain / Android Keystore, supplemented with network SSL Pinning against MITM.</div>
               </div>
               <div class="feature-item">
                 <div class="feature-icon" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24;">✓</div>
-                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Reactive State (GetIt & WatchIt):</strong> Clean separation between domain entities, API interceptors, and presentation layers for 0-jitter UI.</div>
+                <div style="font-size: 0.94rem; color: #cbd5e1;"><strong>Clean GetIt / WatchIt Dependency Injection:</strong> High performance state management ensuring instantaneous tab switching and 0-jitter UI.</div>
               </div>
             </div>
 
-            <!-- Tech stack pills -->
+            <!-- Tech Pills -->
             <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px;">
-              <span class="tech-pill">Flutter</span>
-              <span class="tech-pill">Dart</span>
+              <span class="tech-pill">Flutter & Dart</span>
               <span class="tech-pill">Clean Architecture</span>
               <span class="tech-pill">GetIt / WatchIt</span>
-              <span class="tech-pill">Retrofit & Dio</span>
+              <span class="tech-pill">Dio & Retrofit</span>
               <span class="tech-pill">SSL Pinning</span>
               <span class="tech-pill">Keychain / Keystore</span>
             </div>
@@ -895,7 +929,7 @@
             <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
               <button onclick="openCaseStudy('vesta')" class="btn-primary">
                 <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                Project Breakdown
+                Project Breakdown & Architecture
               </button>
               <a href="https://apps.apple.com/vn/app/vesta/id1497335423?l=vi" target="_blank" rel="noopener" class="btn-secondary">
                 <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.66-1.09 1.73-.96 2.76.99.08 2.05-.51 2.69-1.26z"/></svg>
@@ -904,15 +938,15 @@
             </div>
           </div>
 
-          <!-- Right: Mobile Device Trio Preview -->
+          <!-- Right: Mockups -->
           <div class="project-mockups" style="display: flex; gap: 14px; justify-content: center; align-items: center;">
-            <div class="iphone-device" style="width: 140px; height: 300px; cursor: pointer;" onclick="openZoom('assets/images/vesta_stay_in_control.jpg')" title="Click to enlarge">
+            <div class="iphone-device" style="width: 140px; height: 300px; cursor: pointer;" onclick="openZoom('assets/images/vesta_stay_in_control.jpg')" title="Tap to zoom">
               <img src="assets/images/vesta_stay_in_control.jpg" alt="Vesta Stay In Control">
             </div>
-            <div class="iphone-device" style="width: 160px; height: 340px; cursor: pointer; z-index: 5; transform: translateY(-10px);" onclick="openZoom('assets/images/vesta_community.jpg')" title="Click to enlarge">
+            <div class="iphone-device" style="width: 160px; height: 340px; cursor: pointer; z-index: 5; transform: translateY(-10px);" onclick="openZoom('assets/images/vesta_community.jpg')" title="Tap to zoom">
               <img src="assets/images/vesta_community.jpg" alt="Vesta Community Hub">
             </div>
-            <div class="iphone-device" style="width: 140px; height: 300px; cursor: pointer;" onclick="openZoom('assets/images/vesta_support.jpg')" title="Click to enlarge">
+            <div class="iphone-device" style="width: 140px; height: 300px; cursor: pointer;" onclick="openZoom('assets/images/vesta_support.jpg')" title="Tap to zoom">
               <img src="assets/images/vesta_support.jpg" alt="Vesta Resident Support">
             </div>
           </div>
@@ -926,9 +960,9 @@
   <section id="architecture" style="padding: 100px 0;">
     <div class="container">
       <div class="section-title-wrap">
-        <span class="section-tag">Engineering Foundation</span>
-        <h2 class="section-title font-display">Technical Stack & Best Practices</h2>
-        <p class="section-desc">Writing scalable, testable, and maintainable code is at the heart of every mobile application I deliver.</p>
+        <span class="section-tag">Engineering Stack</span>
+        <h2 class="section-title font-display">Technical Matrix & Practices</h2>
+        <p class="section-desc">Writing testable, maintainable, and hardware-accelerated code is central to my mobile development philosophy.</p>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 28px;">
@@ -940,19 +974,19 @@
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
             </div>
             <div>
-              <h4 style="font-size: 1.25rem; font-weight: 700;">Mobile Core & Languages</h4>
+              <h4 style="font-size: 1.25rem; font-weight: 700;">Mobile Core Platforms</h4>
               <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 600;">Cross-Platform & Native</span>
             </div>
           </div>
           <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
-            Deep mastery of Flutter engine internals alongside native Android (Kotlin) and iOS (Swift) bridges for hardware-accelerated performance.
+            Deep mastery of Flutter rendering pipeline paired with native Kotlin and Swift bridges for hardware integration and background tasks.
           </p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            <span class="tech-pill" style="border-color: #38bdf8; color: #38bdf8;">Flutter & Dart</span>
-            <span class="tech-pill" style="border-color: #a78bfa; color: #a78bfa;">Android (Kotlin/Java)</span>
+            <span class="tech-pill" style="border-color: #38bdf8; color: #38bdf8;">Flutter (Dart)</span>
+            <span class="tech-pill" style="border-color: #a78bfa; color: #a78bfa;">Android (Kotlin)</span>
             <span class="tech-pill" style="border-color: #f472b6; color: #f472b6;">iOS (Swift)</span>
-            <span class="tech-pill">Platform Channels</span>
-            <span class="tech-pill">Custom Renderers</span>
+            <span class="tech-pill">MethodChannels</span>
+            <span class="tech-pill">Dart FFI</span>
           </div>
         </div>
 
@@ -963,20 +997,19 @@
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
             </div>
             <div>
-              <h4 style="font-size: 1.25rem; font-weight: 700;">State & Layered Architecture</h4>
+              <h4 style="font-size: 1.25rem; font-weight: 700;">Clean & Layered State</h4>
               <span style="font-size: 0.8rem; color: #818cf8; font-weight: 600;">Maintainable & Testable</span>
             </div>
           </div>
           <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
-            Enforcing clean boundaries between UI, domain business logic, repositories, and network layers. Zero business logic in widgets.
+            Decoupled presentation, domain business rules, and data sources. Zero business logic in widgets, with predictable state transitions.
           </p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            <span class="tech-pill">GetX Layered Pattern</span>
+            <span class="tech-pill">GetX Pattern</span>
             <span class="tech-pill">GetIt / WatchIt</span>
             <span class="tech-pill">Clean Architecture</span>
             <span class="tech-pill">MVVM</span>
-            <span class="tech-pill">RxDart & Streams</span>
-            <span class="tech-pill">AutoRoute</span>
+            <span class="tech-pill">RxDart / Streams</span>
           </div>
         </div>
 
@@ -988,18 +1021,17 @@
             </div>
             <div>
               <h4 style="font-size: 1.25rem; font-weight: 700;">Networking & Telemetry</h4>
-              <span style="font-size: 0.8rem; color: #c084fc; font-weight: 600;">Zero Crash Reliability</span>
+              <span style="font-size: 0.8rem; color: #c084fc; font-weight: 600;">Production Reliability</span>
             </div>
           </div>
           <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
-            Interceptors for token auto-refresh, offline queuing, crash logging funnels, and real-time push notification payloads.
+            Dio interceptors for token auto-refresh, offline caching queues, Firebase Crashlytics tracking funnels, and real-time FCM payloads.
           </p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
             <span class="tech-pill">Dio & Retrofit</span>
             <span class="tech-pill">Firebase Analytics</span>
             <span class="tech-pill">Crashlytics Funnels</span>
-            <span class="tech-pill">FCM Push Messaging</span>
-            <span class="tech-pill">Remote Config</span>
+            <span class="tech-pill">FCM Notifications</span>
           </div>
         </div>
 
@@ -1010,18 +1042,18 @@
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
             </div>
             <div>
-              <h4 style="font-size: 1.25rem; font-weight: 700;">AI & Edge Intelligence</h4>
-              <span style="font-size: 0.8rem; color: #34d399; font-weight: 600;">Next-Gen Mobile Capability</span>
+              <h4 style="font-size: 1.25rem; font-weight: 700;">On-Device AI & Audio</h4>
+              <span style="font-size: 0.8rem; color: #34d399; font-weight: 600;">Offline Edge Intelligence</span>
             </div>
           </div>
           <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
-            Deploying quantized neural networks directly to mobile devices without sending user voice or data to third-party servers.
+            Embedding quantized weights on smartphones: high-accuracy offline ASR, speaker diarization, and on-device LLM summarization.
           </p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
             <span class="tech-pill" style="border-color: #34d399; color: #34d399;">On-Device LLM (GGUF)</span>
             <span class="tech-pill">sherpa-onnx (Offline STT)</span>
             <span class="tech-pill">ONNX Runtime</span>
-            <span class="tech-pill">AI Agent Workflows</span>
+            <span class="tech-pill">Isolate Background Threads</span>
           </div>
         </div>
 
@@ -1032,19 +1064,18 @@
               <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
             </div>
             <div>
-              <h4 style="font-size: 1.25rem; font-weight: 700;">CI/CD, Release & Security</h4>
-              <span style="font-size: 0.8rem; color: #f59e0b; font-weight: 600;">Store Pipeline & Compliance</span>
+              <h4 style="font-size: 1.25rem; font-weight: 700;">Release Pipeline & Security</h4>
+              <span style="font-size: 0.8rem; color: #f59e0b; font-weight: 600;">Play Store & App Store</span>
             </div>
           </div>
           <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
-            Automated keystore signing, build flavors, TestFlight beta staging, Google Play Console policy verification, and SSL Pinning.
+            Keystore signing, multi-tenant build variants, TestFlight distribution, Google Play store policy review, and hardware token encryption.
           </p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
             <span class="tech-pill">Google Play Console</span>
             <span class="tech-pill">App Store Connect</span>
-            <span class="tech-pill">Gradle Variants</span>
             <span class="tech-pill">SSL Pinning</span>
-            <span class="tech-pill">Encrypted Keystore</span>
+            <span class="tech-pill">Keychain / Keystore</span>
           </div>
         </div>
 
@@ -1056,17 +1087,17 @@
             </div>
             <div>
               <h4 style="font-size: 1.25rem; font-weight: 700;">Education & Communication</h4>
-              <span style="font-size: 0.8rem; color: #60a5fa; font-weight: 600;">Honors Graduate</span>
+              <span style="font-size: 0.8rem; color: #60a5fa; font-weight: 600;">HCMUTE Honors Graduate</span>
             </div>
           </div>
           <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
-            HCMUTE Bachelor of Software Engineering graduate with Honors. Strong English proficiency (TOEIC 600) and cross-functional leadership.
+            Bachelor of Software Engineering (Honors Degree, GPA 3.5 / 4.0). High English proficiency (TOEIC 600) with Agile / Scrum alignment.
           </p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            <span class="tech-pill" style="border-color: #fbbf24; color: #fbbf24;">HCMUTE Honors (GPA 3.5/4.0)</span>
+            <span class="tech-pill" style="border-color: #fbbf24; color: #fbbf24;">Honors (GPA 3.5/4.0)</span>
             <span class="tech-pill">TOEIC 600</span>
             <span class="tech-pill">Strict Code Reviews</span>
-            <span class="tech-pill">Agile / Scrum</span>
+            <span class="tech-pill">Cross-Functional Agile</span>
           </div>
         </div>
 
@@ -1074,20 +1105,22 @@
     </div>
   </section>
 
-  <!-- PROFESSIONAL CAREER TIMELINE -->
+  <!-- PROFESSIONAL WORK EXPERIENCE TIMELINE -->
   <section id="experience" style="padding: 100px 0;">
     <div class="container">
       <div class="section-title-wrap">
-        <span class="section-tag">Career Trajectory</span>
+        <span class="section-tag">Career History</span>
         <h2 class="section-title font-display">Work Experience</h2>
-        <p class="section-desc">Consistent track record of delivering commercial mobile applications across modern software houses.</p>
+        <p class="section-desc">Delivering production mobile solutions and driving clean engineering standards.</p>
       </div>
 
-      <div style="max-width: 860px; margin: 0 auto;" class="timeline">
-        
+      <div style="max-width: 860px; margin: 0 auto; position: relative; padding-left: 36px;">
+        <!-- Timeline Bar -->
+        <div style="position: absolute; left: 11px; top: 12px; bottom: 12px; width: 2px; background: linear-gradient(to bottom, #38bdf8, #818cf8, #fbbf24, transparent);"></div>
+
         <!-- Experience 1 -->
         <div style="position: relative; margin-bottom: 48px;">
-          <div class="timeline-dot"></div>
+          <div style="position: absolute; left: -32px; top: 10px; width: 16px; height: 16px; border-radius: 50%; background: #060813; border: 3px solid #38bdf8; box-shadow: 0 0 12px #38bdf8;"></div>
           <div class="glass-card" style="padding: 34px;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
               <div>
@@ -1111,7 +1144,7 @@
 
         <!-- Experience 2 -->
         <div style="position: relative; margin-bottom: 48px;">
-          <div class="timeline-dot" style="border-color: #818cf8; box-shadow: 0 0 12px var(--secondary);"></div>
+          <div style="position: absolute; left: -32px; top: 10px; width: 16px; height: 16px; border-radius: 50%; background: #060813; border: 3px solid #818cf8; box-shadow: 0 0 12px #818cf8;"></div>
           <div class="glass-card" style="padding: 34px;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
               <div>
@@ -1132,9 +1165,9 @@
 
         <!-- Education Card -->
         <div style="position: relative;">
-          <div class="timeline-dot" style="border-color: #fbbf24; box-shadow: 0 0 12px #fbbf24;"></div>
+          <div style="position: absolute; left: -32px; top: 10px; width: 16px; height: 16px; border-radius: 50%; background: #060813; border: 3px solid #fbbf24; box-shadow: 0 0 12px #fbbf24;"></div>
           <div class="glass-card" style="padding: 34px; border-color: rgba(251, 191, 36, 0.35);">
-            <div style="display: justify; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
               <div>
                 <h3 style="font-size: 1.45rem; font-weight: 800; color: #ffffff;" class="font-display">Ho Chi Minh City University of Technology and Education (HCMUTE)</h3>
                 <div style="color: #fbbf24; font-weight: 600; font-size: 1.05rem;">Bachelor of Software Engineering (Honors Degree)</div>
@@ -1148,7 +1181,7 @@
               <span class="tech-pill" style="border-color: #fbbf24; color: #fbbf24; font-weight: 700;">Graduated with Honors</span>
               <span class="tech-pill" style="border-color: #38bdf8; color: #38bdf8; font-weight: 700;">GPA: 3.5 / 4.0</span>
               <span class="tech-pill">English: TOEIC 600</span>
-              <span class="tech-pill">Location: Ho Chi Minh City, Vietnam</span>
+              <span class="tech-pill">Ho Chi Minh City, Vietnam</span>
             </div>
           </div>
         </div>
@@ -1166,7 +1199,7 @@
           Let's Build Something <span class="text-gradient">Extraordinary</span>
         </h2>
         <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 620px; margin: 0 auto 36px auto;">
-          Looking for a dedicated Mobile Engineer who can take your idea from architectural blueprint to 5-star rating on Google Play and App Store? Let's talk.
+          Whether you need an offline AI mobile tool, white-label multi-tenant platform, or a 5-star cross-platform application, I'm ready to bring it to life.
         </p>
 
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 44px;">
@@ -1191,13 +1224,11 @@
     </div>
   </section>
 
-  <!-- FULLSCREEN CASE STUDY DRAWER MODAL -->
+  <!-- FULLSCREEN CASE STUDY & ARCHITECTURE DRAWER MODAL -->
   <div id="caseStudyDrawer" class="drawer-modal" onclick="closeCaseStudy()">
     <div class="drawer-body" onclick="event.stopPropagation()">
       <button class="drawer-close" onclick="closeCaseStudy()">&times;</button>
-      <div id="drawerContent">
-        <!-- Injected via JavaScript -->
-      </div>
+      <div id="drawerContent"></div>
     </div>
   </div>
 
@@ -1206,62 +1237,90 @@
     <img id="zoomImg" src="" alt="Zoomed screenshot" onclick="event.stopPropagation()">
   </div>
 
-  <!-- APPLICATION SCRIPTS & CASE STUDY DATA -->
+  <!-- SCRIPTS, INTERACTION LOGIC & DETAILED ARCHITECTURAL SPECS -->
   <script>
-    // Project case study data
+    // Detailed Case Study Data including code architecture snippets
     const caseStudies = {
       clearhear: {
         title: "ClearHear App",
         subtitle: "On-Device Live Speech Captioning & Offline LLM Summarization",
         category: "Artificial Intelligence & Edge Computing",
         role: "Lead Mobile Developer (Flutter)",
-        overview: "ClearHear is a breakthrough mobile application engineered for high-privacy environments such as medical consultations, legal interviews, and executive meetings where audio data cannot be transmitted over the public internet. By bundling sherpa-onnx and llama.cpp/flutter_llama on the device, it provides instant speech-to-text and AI summarization without relying on any cloud API.",
-        techStack: ["Flutter", "Dart", "GetX", "ONNX Runtime", "sherpa-onnx", "flutter_llama (Qwen2.5 GGUF)", "SQLite (sqflite)", "Audio Waveforms"],
+        overview: "ClearHear is a privacy-first mobile application built for environments where spoken audio cannot be sent to cloud servers (such as medical consultations, legal depositions, and private executive boardrooms). By packaging sherpa-onnx and flutter_llama directly inside the Flutter bundle, it achieves real-time speech transcription and automated meeting notes generation with 0ms network latency and zero recurring server costs.",
+        techStack: ["Flutter", "Dart", "GetX Pattern", "ONNX Runtime", "sherpa-onnx (Offline STT)", "flutter_llama (Qwen2.5 GGUF)", "SQLite (sqflite)", "Custom Canvas Audio Waveforms"],
         screenshots: [
-          { src: "assets/images/clearhear_main.png", title: "Real-Time STT & Speaker Diarization" },
-          { src: "assets/images/clearhear_session_detail.jpg", title: "On-Device Qwen LLM Meeting Notes" },
-          { src: "assets/images/clearhear_settings.png", title: "Privacy Controls & Model Parameters" }
+          { src: "assets/images/clearhear_main.png", title: "Live Speech-to-Text & Diarization" },
+          { src: "assets/images/clearhear_session_detail.jpg", title: "Local Qwen LLM Meeting Notes" },
+          { src: "assets/images/clearhear_settings.png", title: "Privacy Controls & Neural Model Config" }
         ],
+        codeSnippet: `// Isolate-Driven Offline STT Pipeline
+class SherpaOfflineEngine {
+  late final SendPort _workerSendPort;
+
+  Future<void> initEngine() async {
+    final receivePort = ReceivePort();
+    await Isolate.spawn(_inferenceWorker, receivePort.sendPort);
+    _workerSendPort = await receivePort.first as SendPort;
+  }
+
+  void streamPcmChunk(Uint8List pcmBuffer) {
+    _workerSendPort.send(AudioChunkMessage(pcmBuffer));
+  }
+}`,
         deepDive: [
           {
-            title: "1. Real-Time Offline Automatic Speech Recognition (sherpa-onnx)",
-            description: "Integrated the sherpa-onnx C++ engine through Dart FFI to stream microphone PCM audio buffers in chunks of 100ms. Implemented an asynchronous isolate thread to ensure the Flutter UI remains at a buttery smooth 60 FPS while continuous neural inference is executed on device."
+            title: "1. Real-Time Offline Speech-to-Text Engine (sherpa-onnx)",
+            description: "Integrated the C++ sherpa-onnx speech recognition engine via Dart FFI. Audio buffers from the device microphone are continuously sampled at 16kHz in 100ms frames and offloaded to a dedicated background Isolate. This ensures the main UI thread consistently runs at a fluid 60 FPS without frame drops during heavy neural inference."
           },
           {
-            title: "2. Embedded Large Language Model (Qwen2.5 GGUF)",
-            description: "Compiled native C++ llama inference weights (Qwen2.5 quantized to 4-bit GGUF). Once a recording session completes, the prompt is processed entirely on the smartphone's local RAM/NPU to generate structured summaries, action items, and topic tagging within seconds, achieving zero cloud server costs."
+            title: "2. Quantized On-Device LLM (flutter_llama / Qwen2.5 GGUF)",
+            description: "Compiled llama.cpp native libraries to run 4-bit quantized Qwen2.5 (0.5B / 1.5B) GGUF weights. Upon session completion, the raw conversation transcript is processed strictly inside local RAM/NPU. The app automatically synthesizes speaker-labeled summaries, action items, and topic tags within seconds."
           },
           {
-            title: "3. Live Audio Waveform Visualization & Reactive State",
-            description: "Developed a custom canvas audio visualizer that syncs directly with microphone amplitude decibels. Used GetX reactive state management to trigger instantaneous UI updates when speaker turn transitions (diarization) occur."
+            title: "3. Live Audio Waveform Canvas & Reactive Diarization",
+            description: "Developed a custom Painter visualizer calculating real-time RMS (Root Mean Square) decibels from microphone input buffers. Used GetX reactive state management to trigger instant speaker badge transitions (diarization) as different speakers talk."
           }
         ]
       },
       canvas: {
         title: "Canvas Living (Generator)",
-        subtitle: "White-Label Community Living Platform (20+ Deployed Brands)",
+        subtitle: "White-Label Community Living Platform (20+ Commercial Brands)",
         category: "Enterprise Multi-Tenant Mobile Ecosystem",
         role: "Mobile Developer (Android Native Kotlin & iOS Swift)",
-        overview: "Canvas Living is a multi-tenant mobile platform designed for international student housing and luxury real estate operators. Instead of building separate codebases for each real estate client, we engineered a white-label generator architecture supporting 20+ distinct brand variants (Brookland, Catalina, Aura Holdings, Ingenia, Serenity Pines) from a unified code foundation.",
+        overview: "Canvas Living is a multi-tenant mobile platform engineered for premier student housing operators and luxury residential communities across the globe. Rather than maintaining dozens of distinct codebases, we architected a white-label generator pipeline supporting 20+ distinct brand variants (Brookland, Catalina, Aura Holdings, Ingenia, Serenity Pines) from a unified clean architecture repository.",
         techStack: ["Kotlin", "Java", "Swift", "Android SDK", "iOS UIKit", "Clean Architecture", "MVVM Pattern", "Gradle Flavors", "Xcode Configurations", "Firebase Cloud Messaging (FCM)"],
         screenshots: [
-          { src: "assets/images/canvas_screen_facilities.jpg", title: "Facility Booking & Amenity Reservation" },
-          { src: "assets/images/canvas_screen_feed.jpg", title: "Community Social Feed & News" },
-          { src: "assets/images/canvas_screen_services.jpg", title: "On-Demand Apartment Services" }
+          { src: "assets/images/canvas_screen_facilities.jpg", title: "Amenity Scheduling & Facility Passes" },
+          { src: "assets/images/canvas_screen_feed.jpg", title: "Interactive Community Feed & Events" },
+          { src: "assets/images/canvas_screen_services.jpg", title: "Apartment On-Demand Services" }
         ],
         storeLink: "https://apps.apple.com/vn/app/serenity-pines/id6478105349?l=vi",
+        codeSnippet: `// Multi-Flavor Variant Configuration (Gradle)
+flavorDimensions "brand"
+productFlavors {
+    serenityPines {
+        dimension "brand"
+        applicationId "com.canvas.serenitypines"
+        resValue "string", "app_name", "Serenity Pines"
+    }
+    catalina {
+        dimension "brand"
+        applicationId "com.canvas.catalina"
+        resValue "string", "app_name", "Catalina Living"
+    }
+}`,
         deepDive: [
           {
             title: "1. Multi-Flavor & Multi-Target Build Orchestration",
-            description: "Designed a modular Gradle build variant setup on Android and Xcode targets/schemas on iOS. Dynamic asset injection swaps logos, primary color palettes, App IDs, and API endpoints at compile time, reducing maintenance overhead by 80% across 20+ clients."
+            description: "Constructed modular productFlavors in Gradle (Android) and Build Schemes/xcconfig in Xcode (iOS). Automated scripts dynamically inject brand logos, brand color palettes, API base URLs, and store credentials at compilation time, cutting client update cycles by over 80%."
           },
           {
-            title: "2. Clean Architecture with Strict MVVM",
-            description: "Decoupled core domain logic from UI presentation. UseCases handle facility scheduling, resident event RSVP, and payment billing while ViewModels expose reactive state observables for bulletproof crash immunity."
+            title: "2. Clean Architecture with Strict MVVM Separation",
+            description: "Separated Domain UseCases (AmenityBookingUseCase, FeedRepository, ResidentProfile) from presentation ViewModels. ViewModels emit state streams via Coroutines Flow / Combine, ensuring robust crash resistance and seamless offline caching."
           },
           {
-            title: "3. Deep Linking & Notification Routing",
-            description: "Implemented Universal Links (iOS) and App Links (Android) paired with Firebase Cloud Messaging. Tapping a notification instantly deep-routes residents directly into their specific lease update, cleaning order, or building announcement."
+            title: "3. Universal Links & Push Notification Routing",
+            description: "Engineered deep linking via Android App Links and Apple Universal Links paired with Firebase Cloud Messaging. Tapping a notification routes residents straight to their specific lease notice, gate QR pass, or maintenance ticket."
           }
         ]
       },
@@ -1270,56 +1329,184 @@
         subtitle: "PropTech Tenant Lifecycle & In-App Contract Signing Platform",
         category: "Fintech & Property Management",
         role: "Mobile Engineer (Flutter)",
-        overview: "Vesta App is a complete PropTech solution that digitizes the entire residential leasing lifecycle. From browsing verified listings to completing digital KYC, signing legally binding rental agreements right on the smartphone screen, and managing monthly rent payments and building keys.",
-        techStack: ["Flutter", "Dart", "Clean Architecture", "GetIt", "WatchIt", "Retrofit", "Dio", "Keychain / Keystore Encryption", "SSL Pinning"],
+        overview: "Vesta App is a complete commercial PropTech mobile application that digitizes every stage of the residential tenant journey: from discovering verified listings and uploading digital KYC credentials, to signing legally binding lease contracts directly on the phone screen and handling recurring payments.",
+        techStack: ["Flutter", "Dart", "Clean Architecture", "GetIt", "WatchIt", "Retrofit", "Dio", "SSL Pinning", "iOS Keychain / Android Keystore"],
         screenshots: [
           { src: "assets/images/vesta_stay_in_control.jpg", title: "Resident Dashboard & Quick Controls" },
-          { src: "assets/images/vesta_community.jpg", title: "Community Events & Building Notices" },
-          { src: "assets/images/vesta_support.jpg", title: "Document Vault & Lease Overview" }
+          { src: "assets/images/vesta_community.jpg", title: "Building Notices & Community Hub" },
+          { src: "assets/images/vesta_support.jpg", title: "Document Vault & Signed Leases" }
         ],
         storeLink: "https://apps.apple.com/vn/app/vesta/id1497335423?l=vi",
+        codeSnippet: `// Biometric Digital Signature & Keystore Encryption
+class SecureSignatureVault {
+  final FlutterSecureStorage _storage = const FlutterSecureStorage();
+
+  Future<void> storeSignedContract({
+    required String contractId,
+    required Uint8List signatureBytes,
+  }) async {
+    final encryptedSignature = await encryptPayload(signatureBytes);
+    await _storage.write(key: 'sig_$contractId', value: encryptedSignature);
+  }
+}`,
         deepDive: [
           {
-            title: "1. Digital E-Signature & Secure Document Handling",
-            description: "Built a responsive touchscreen signature drawing pad with Bezier curve smoothing. Users can draw, type, or upload verifiable digital signatures which are securely stamped into PDF lease contracts directly on the device."
+            title: "1. Digital E-Signature Capture & Document Stamping",
+            description: "Built a custom touch gesture signature pad using Bezier curve interpolation to capture high-fidelity vector signatures. The signature is rendered and embedded directly into encrypted PDF tenancy agreements on device."
           },
           {
-            title: "2. Banking-Grade Security & SSL Pinning",
-            description: "Implemented SSL Certificate Pinning via Dio interceptors to prevent Man-in-the-Middle (MITM) attacks. Sensitive authentication tokens, tenant biometric keys, and lease metadata are secured in hardware-backed storage (iOS Keychain & Android Keystore)."
+            title: "2. Banking-Grade Security & Network SSL Pinning",
+            description: "Protected client data with SSL Certificate Pinning through Dio interceptors to block Man-in-the-Middle (MITM) vulnerabilities. Sensitive authentication tokens and user biometric keys are stored in hardware-backed iOS Keychain and Android Keystore."
           },
           {
             title: "3. Service Locator & Reactive Dependency Injection",
-            description: "Employed GetIt alongside WatchIt to achieve loose coupling between networking services, repository layers, and UI state, resulting in high testability and consistent 60 FPS transitions."
+            description: "Leveraged GetIt paired with WatchIt to maintain a lightweight, highly decoupled architectural foundation. Provides lightning-fast navigation, zero memory leaks, and frictionless unit testing coverage."
           }
         ]
       }
     };
 
-    // Hero phone screen switcher
-    function switchHeroScreen(type) {
-      const phoneImg = document.getElementById('heroPhoneImg');
-      document.querySelectorAll('.hero-device-wrap .tech-pill').forEach(btn => btn.classList.remove('active'));
-      
+    // Hero Simulator App Switcher
+    function switchSimApp(type) {
+      document.getElementById('sim-screen-clearhear').style.display = 'none';
+      document.getElementById('sim-screen-canvas').style.display = 'none';
+      document.getElementById('sim-screen-vesta').style.display = 'none';
+
+      document.getElementById('btn-tab-clearhear').classList.remove('active');
+      document.getElementById('btn-tab-canvas').classList.remove('active');
+      document.getElementById('btn-tab-vesta').classList.remove('active');
+
       if (type === 'clearhear') {
-        phoneImg.src = 'assets/images/clearhear_main.png';
-        document.getElementById('btn-hero-clearhear').classList.add('active');
+        document.getElementById('sim-screen-clearhear').style.display = 'flex';
+        document.getElementById('btn-tab-clearhear').classList.add('active');
       } else if (type === 'canvas') {
-        phoneImg.src = 'assets/images/canvas_screen_feed.jpg';
-        document.getElementById('btn-hero-canvas').classList.add('active');
+        document.getElementById('sim-screen-canvas').style.display = 'flex';
+        document.getElementById('btn-tab-canvas').classList.add('active');
       } else if (type === 'vesta') {
-        phoneImg.src = 'assets/images/vesta_community.jpg';
-        document.getElementById('btn-hero-vesta').classList.add('active');
+        document.getElementById('sim-screen-vesta').style.display = 'flex';
+        document.getElementById('btn-tab-vesta').classList.add('active');
+        initSignatureCanvas();
       }
     }
 
-    // Open Case Study Drawer
+    // Interactive Waveform Generator for ClearHear
+    const waveformContainer = document.getElementById('sim-waveforms');
+    for (let i = 0; i < 24; i++) {
+      const bar = document.createElement('div');
+      bar.className = 'sim-waveform-bar';
+      bar.style.height = `${Math.floor(Math.random() * 24 + 6)}px`;
+      waveformContainer.appendChild(bar);
+    }
+    setInterval(() => {
+      if (document.getElementById('sim-screen-clearhear').style.display !== 'none') {
+        const bars = document.querySelectorAll('.sim-waveform-bar');
+        bars.forEach(b => {
+          b.style.height = `${Math.floor(Math.random() * 28 + 6)}px`;
+        });
+      }
+    }, 200);
+
+    // Simulate Voice STT
+    const sampleSentences = [
+      { speaker: "Speaker 1", time: "00:15", text: "Latency is below 80 milliseconds across all audio frames." },
+      { speaker: "Speaker 2", time: "00:21", text: "Zero network packets transmitted during entire conversation." },
+      { speaker: "Speaker 1", time: "00:28", text: "Ready to trigger on-device Qwen2.5 GGUF summarization." }
+    ];
+    let sentenceIdx = 0;
+    function simAddSpeech() {
+      if (sentenceIdx >= sampleSentences.length) sentenceIdx = 0;
+      const s = sampleSentences[sentenceIdx++];
+      const box = document.getElementById('sim-transcript-box');
+      const bubble = document.createElement('div');
+      bubble.className = 'sim-chat-bubble';
+      bubble.style.background = s.speaker === 'Speaker 1' ? 'rgba(56, 189, 248, 0.15)' : 'rgba(192, 132, 252, 0.15)';
+      bubble.style.border = s.speaker === 'Speaker 1' ? '1px solid rgba(56, 189, 248, 0.3)' : '1px solid rgba(192, 132, 252, 0.3)';
+      bubble.innerHTML = `
+        <div style="font-size: 0.68rem; color: ${s.speaker === 'Speaker 1' ? '#38bdf8' : '#c084fc'}; font-weight: 700; margin-bottom: 2px;">${s.speaker} • ${s.time}</div>
+        <div>${s.text}</div>
+      `;
+      box.appendChild(bubble);
+      box.scrollTop = box.scrollHeight;
+    }
+
+    function simSummarize() {
+      const box = document.getElementById('sim-transcript-box');
+      const summaryBubble = document.createElement('div');
+      summaryBubble.className = 'sim-chat-bubble';
+      summaryBubble.style.background = 'rgba(16, 185, 129, 0.2)';
+      summaryBubble.style.border = '1px solid rgba(16, 185, 129, 0.4)';
+      summaryBubble.innerHTML = `
+        <div style="font-size: 0.68rem; color: #34d399; font-weight: 700; margin-bottom: 2px;">⚡ Qwen2.5 Local Summary (Generated in 1.2s)</div>
+        <div style="font-size: 0.75rem; color: #fff;">• Speech verified offline via sherpa-onnx.<br>• 100% privacy maintained with zero backend data transmission.</div>
+      `;
+      box.appendChild(summaryBubble);
+      box.scrollTop = box.scrollHeight;
+    }
+
+    // Canvas White-Label Tenant Switcher
+    function switchTenant(name, color) {
+      document.getElementById('sim-canvas-brand-title').innerText = name;
+      document.getElementById('sim-canvas-brand-title').style.color = color;
+      document.querySelectorAll('#sim-screen-canvas .tech-pill').forEach(p => p.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    // Vesta Signature Pad
+    let sigCanvas, sigCtx, isDrawing = false;
+    function initSignatureCanvas() {
+      sigCanvas = document.getElementById('sigCanvas');
+      if (!sigCanvas) return;
+      sigCtx = sigCanvas.getContext('2d');
+      sigCanvas.width = sigCanvas.offsetWidth;
+      sigCanvas.height = sigCanvas.offsetHeight;
+      sigCtx.strokeStyle = '#38bdf8';
+      sigCtx.lineWidth = 2.5;
+      sigCtx.lineCap = 'round';
+
+      sigCanvas.onmousedown = (e) => { isDrawing = true; sigCtx.beginPath(); sigCtx.moveTo(e.offsetX, e.offsetY); };
+      sigCanvas.onmousemove = (e) => { if (isDrawing) { sigCtx.lineTo(e.offsetX, e.offsetY); sigCtx.stroke(); } };
+      sigCanvas.onmouseup = () => isDrawing = false;
+      sigCanvas.onmouseleave = () => isDrawing = false;
+
+      // Touch events for mobile/tablet
+      sigCanvas.ontouchstart = (e) => {
+        isDrawing = true;
+        const rect = sigCanvas.getBoundingClientRect();
+        sigCtx.beginPath();
+        sigCtx.moveTo(e.touches[0].clientX - rect.left, e.touches[0].clientY - rect.top);
+        e.preventDefault();
+      };
+      sigCanvas.ontouchmove = (e) => {
+        if (isDrawing) {
+          const rect = sigCanvas.getBoundingClientRect();
+          sigCtx.lineTo(e.touches[0].clientX - rect.left, e.touches[0].clientY - rect.top);
+          sigCtx.stroke();
+        }
+        e.preventDefault();
+      };
+      sigCanvas.ontouchend = () => isDrawing = false;
+    }
+
+    function clearSignature() {
+      if (sigCtx && sigCanvas) {
+        sigCtx.clearRect(0, 0, sigCanvas.width, sigCanvas.height);
+        document.getElementById('sig-status').innerText = '';
+      }
+    }
+
+    function submitSignature() {
+      const status = document.getElementById('sig-status');
+      status.innerText = '✓ Signed & Stamped into Lease PDF (Encrypted)';
+    }
+
+    // Open Case Study Modal
     function openCaseStudy(key) {
       const data = caseStudies[key];
       if (!data) return;
 
       let screenshotsHtml = data.screenshots.map(s => `
         <div style="text-align: center;">
-          <div class="iphone-device" style="width: 170px; height: 360px; margin: 0 auto; cursor: pointer;" onclick="openZoom('${s.src}')">
+          <div class="iphone-device" style="width: 175px; height: 370px; margin: 0 auto; cursor: pointer;" onclick="openZoom('${s.src}')">
             <img src="${s.src}" alt="${s.title}">
           </div>
           <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 10px; font-weight: 500;">${s.title}</div>
@@ -1329,41 +1516,49 @@
       let techPillsHtml = data.techStack.map(t => `<span class="tech-pill">${t}</span>`).join('');
 
       let deepDiveHtml = data.deepDive.map(d => `
-        <div style="margin-bottom: 24px; padding: 20px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px;">
-          <h5 style="font-size: 1.1rem; font-weight: 700; color: #38bdf8; margin-bottom: 8px;">${d.title}</h5>
-          <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.7;">${d.description}</p>
+        <div style="margin-bottom: 24px; padding: 22px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px;">
+          <h5 style="font-size: 1.15rem; font-weight: 700; color: #38bdf8; margin-bottom: 8px;">${d.title}</h5>
+          <p style="color: #cbd5e1; font-size: 0.98rem; line-height: 1.75;">${d.description}</p>
         </div>
       `).join('');
 
       let storeBtnHtml = data.storeLink ? `
-        <a href="${data.storeLink}" target="_blank" rel="noopener" class="btn-primary" style="margin-top: 14px;">
+        <a href="${data.storeLink}" target="_blank" rel="noopener" class="btn-primary" style="margin-top: 16px;">
           <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.66-1.09 1.73-.96 2.76.99.08 2.05-.51 2.69-1.26z"/></svg>
-          Open Live App on Apple App Store &rarr;
+          Open Application on Apple App Store &rarr;
         </a>
       ` : '';
 
       const content = `
         <div style="margin-bottom: 24px;">
-          <div style="display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #38bdf8; letter-spacing: 0.1em; margin-bottom: 8px;">
+          <div style="display: inline-block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: #38bdf8; letter-spacing: 0.1em; margin-bottom: 8px;">
             ${data.category} • ${data.role}
           </div>
-          <h2 style="font-size: 2.4rem; font-weight: 800; color: #fff; margin-bottom: 6px;" class="font-display">${data.title}</h2>
-          <p style="font-size: 1.15rem; color: #94a3b8; font-weight: 600;">${data.subtitle}</p>
+          <h2 style="font-size: 2.5rem; font-weight: 800; color: #fff; margin-bottom: 8px;" class="font-display">${data.title}</h2>
+          <p style="font-size: 1.2rem; color: #94a3b8; font-weight: 600;">${data.subtitle}</p>
         </div>
 
-        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.8; margin-bottom: 32px;">${data.overview}</p>
+        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.8; margin-bottom: 34px;">${data.overview}</p>
 
-        <!-- Screenshot Gallery in Devices -->
-        <div style="margin-bottom: 36px;">
-          <h4 style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 20px;">📱 Actual Application Screens (Tap to enlarge)</h4>
+        <!-- Screenshots Showcase -->
+        <div style="margin-bottom: 38px;">
+          <h4 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 20px;">📱 Actual App Screens (Click to enlarge)</h4>
           <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
             ${screenshotsHtml}
           </div>
         </div>
 
+        <!-- Code Architecture Blueprint -->
+        <div style="margin-bottom: 38px;">
+          <h4 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 14px;">💻 Code Architecture Pattern</h4>
+          <div style="background: #020617; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 20px; overflow-x: auto;">
+            <pre class="font-mono" style="font-size: 0.85rem; color: #38bdf8; line-height: 1.6;"><code>${data.codeSnippet.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
+          </div>
+        </div>
+
         <!-- Technical Deep Dive -->
-        <div style="margin-bottom: 36px;">
-          <h4 style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 20px;">⚙️ Engineering Architecture & Key Features</h4>
+        <div style="margin-bottom: 38px;">
+          <h4 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 20px;">⚙️ Engineering Challenges & Implementations</h4>
           ${deepDiveHtml}
         </div>
 
@@ -1388,7 +1583,6 @@
       document.body.style.overflow = '';
     }
 
-    // Zoom Image Lightbox
     function openZoom(src) {
       document.getElementById('zoomImg').src = src;
       document.getElementById('zoomModal').classList.add('active');
@@ -1397,13 +1591,17 @@
       document.getElementById('zoomModal').classList.remove('active');
     }
 
-    // Keyboard ESC listener
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeZoom();
         closeCaseStudy();
       }
     });
+
+    // Initialize signature canvas once DOM ready
+    window.onload = () => {
+      initSignatureCanvas();
+    };
   </script>
 </body>
 </html>
